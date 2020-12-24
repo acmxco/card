@@ -128,6 +128,10 @@
 		}
 	</style>
 </head>
+<script>
+	
+
+</script>
 <body class="clean-body" style="margin: 0; padding: 0; -webkit-text-size-adjust: 100%; background-color: #FFFFFF;">
 	<!--[if IE]><div class="ie-browser"><![endif]-->
 		<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="nl-container" role="presentation" style="table-layout: fixed; vertical-align: top; min-width: 320px; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #FFFFFF; width: 100%;" valign="top" width="100%">
@@ -304,30 +308,30 @@
 																			background-position: 40%;
 
 																		}
-							
-																		@media (hover: hover) {
-																							.boxx:hover{
-																				transform: scale(1.3);
+																		.boxx:hover,.boxx:active,.boxx:focus {
+																			transform: scale(1.3);
 
-																			}
-																			.card:hover .imgBox  {
-																				transform: rotatey(-135deg);
-																			}
-																			.card:hover{
-																				transform: translate(-50%, -50%) rotate(-10deg);
-																				box-shadow: inset 20px 0 50px rgba(0, 0, 0, .1), 0 20px 100px rgba(0, 0, 0, .1);
-																				perspective: 2000px;
-																			}
 																		}
+																		.card:hover .imgBox, .card:active .imgBox , .card:focus .imgBox  {
+																			transform: rotatey(-135deg);
+																		}
+																		.card:hover, .card:active, .card:focus
+																		{
+																			transform: translate(-50%, -50%) rotate(-10deg);
+																			box-shadow: inset 20px 0 50px rgba(0, 0, 0, .1), 0 20px 100px rgba(0, 0, 0, .1);
+																			perspective: 2000px;
+																		}
+
 																		@media(hover: hover) and (pointer: fine) {
-																			.boxx:hover{
+																			.boxx:hover,.boxx:active,.boxx:focus {
 																				transform: scale(1.3);
 
 																			}
-																			.card:hover .imgBox  {
+																			.card:hover .imgBox, .card:active .imgBox , .card:focus .imgBox  {
 																				transform: rotatey(-135deg);
 																			}
-																			.card:hover{
+																			.card:hover, .card:active, .card:focus
+																			{
 																				transform: translate(-50%, -50%) rotate(-10deg);
 																				box-shadow: inset 20px 0 50px rgba(0, 0, 0, .1), 0 20px 100px rgba(0, 0, 0, .1);
 																				perspective: 2000px;
@@ -366,10 +370,10 @@
 																			}
 																		}
 																	</style>
-																	<div class="card" aria-haspopup="true">
-																		<div class="imgBox" aria-haspopup="true"></div>
-																		<div class="details" aria-haspopup="true">
-																			<div class="boxx" aria-haspopup="true"> </div>
+																	<div class="card">
+																		<div class="imgBox" ></div>
+																		<div class="details">
+																			<div class="boxx"> </div>
 																		</div>
 																	</div>
 																</div>
