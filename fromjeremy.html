@@ -130,10 +130,18 @@
 	</style>
 </head>
 <script>
+	useEffect(() => {
+  window.addEventListener('touchstart', () => {
+    document.getElementById('player').muted = false
+    document.getElementById('player').play()
+  })
+})
+	
+document.getElementById('player').muted = false
+    document.getElementById('player').play()
 // $(".card").click(function() {
 //   $('.card').toggleClass('.cardHover');
 // });
-document.getElementById('player').play();
 </script>
 
 <body class="clean-body" style="margin: 0; padding: 0; -webkit-text-size-adjust: 100%; background-color: #FFFFFF;" tabindex="0">
@@ -144,7 +152,7 @@ document.getElementById('player').play();
 				<tr style="vertical-align: top;" valign="top">
 					<td style="word-break: break-word; vertical-align: top;" valign="top">
 						<!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color:#FFFFFF"><![endif]-->
-							<div style="background-image:url('https://i.imgur.com/Eug00EN.jpg');background-position:top center;background-repeat:repeat;background-color:#2e553a;">
+							<div class="bckgrd" style="background-image:url('https://i.imgur.com/Eug00EN.jpg');background-position:top center;background-repeat:repeat;background-color:#2e553a;">
 								<div class="block-grid" style="min-width: 320px; max-width: 640px; overflow-wrap: break-word; word-wrap: break-word; word-break: break-word; Margin: 0 auto; background-color: transparent;">
 									<div style="border-collapse: collapse;display: table;width: 100%;background-color:transparent;">
 										<!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-image:url('images/BC_IntroRange_Green_bg.png');background-position:top left;background-repeat:repeat;background-color:#2e553a;"><tr><td align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:640px"><tr class="layout-full-width" style="background-color:transparent"><![endif]-->
@@ -359,8 +367,8 @@ document.getElementById('player').play();
 																				margin-bottom:2em;
 																			}
 audio{
-	margin-left:30%;
-}
+																				margin-left:30%;
+																			}
 																			@media (max-width: 660px) {
 																				.card{
 																					width:250px;
@@ -391,15 +399,18 @@ audio{
 																					margin-top:-4em;
 																					margin-bottom: 4em;
 																				}
-																				audio{
-																					margin-left:10px;
+																				.bckgrd{
+																				background-size:180%;
 																				}
-
+																				audio{
+																					margin-left:15%;
+																					text-align:center;
+																				}
+																				
 																			}
 																		</style>
 																		<div class="whole">
 																			<div class="card" ontouchstart="myCard()">
-
 																				<div class="imgBox" ></div>
 																				<div class="details">
 																					<div class="boxx"> </div>
@@ -408,9 +419,6 @@ audio{
 																		</div>
 																	</div>
 
-
-
-
 																	<table border="0" cellpadding="0" cellspacing="0" class="divider" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top" width="100%">
 																		<tbody>
 																			<tr style="vertical-align: top;" valign="top">
@@ -457,7 +465,6 @@ audio{
 																			</tr>
 																		</tbody>
 																	</table>
-
 																	<table border="0" cellpadding="0" cellspacing="0" class="divider" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top" width="100%">
 																		<tbody>
 																			<tr style="vertical-align: top;" valign="top">
@@ -507,87 +514,86 @@ audio{
 																				</tr>
 																			</tbody>
 																		</table>
-
 																		<div class ="bottomtxt" style="color:#393d47;font-family:Georgia, Times, 'Times New Roman', serif;line-height:1.2;padding-top:10px;padding-right:10px;padding-bottom:10px;padding-left:10px;">
 																			<div style="line-height: 1.2; font-size: 12px; font-family: Georgia, Times, 'Times New Roman', serif; color: #393d47; mso-line-height-alt: 14px;">
-																				<audio autoplay loop controls id="player" style="">
+																				<p style="font-size: 42px; line-height: 1.2; text-align: center; word-break: break-word; font-family: Georgia, Times, 'Times New Roman', serif; mso-line-height-alt: 50px; margin: 0;"><span style="color: #f9c1aa; font-size: 42px;"><span style=""><strong class="fthc">Feel the holiday cheer</strong></span></span></p>
+																				<br>
+																				<br>
+																				<p style="color:#f9c0a8; font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; mso-line-height-alt: 10px; margin: 0;"><strong>Click to open</strong>
+																					
+																				</p>
+																				<table border="0" cellpadding="0" cellspacing="0" class="divider" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top" width="100%">
+																					<tbody>
+																						<tr style="vertical-align: top;" valign="top">
+																							<td class="divider_inner" style="word-break: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;" valign="top">
+																								<table align="center" border="0" cellpadding="0" cellspacing="0" class="divider_content" height="30" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-top: 1px solid transparent; height: 30px; width: 100%;" valign="top" width="100%">
+																									<tbody>
+																										<tr style="vertical-align: top;" valign="top">
+																											<td height="30" style="word-break: break-word; vertical-align: top; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top"><span></span></td>
+																										</tr>
+																									</tbody>
+																								</table>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																				<table border="0" cellpadding="0" cellspacing="0" class="divider" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top" width="100%">
+																					<tbody>
+																						<tr style="vertical-align: top;" valign="top">
+																							<td class="divider_inner" style="word-break: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;" valign="top">
+																								<table align="center" border="0" cellpadding="0" cellspacing="0" class="divider_content" height="30" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-top: 1px solid transparent; height: 30px; width: 100%;" valign="top" width="100%">
+																									<tbody>
+																										<tr style="vertical-align: top;" valign="top">
+																										<audio autoplay loop controls id="player" style="" class="audio">
 																					<source src="christmas.mp3" allow="autoplay">
 																					</audio>
-																					<p style="font-size: 42px; line-height: 1.2; text-align: center; word-break: break-word; font-family: Georgia, Times, 'Times New Roman', serif; mso-line-height-alt: 50px; margin: 0;"><span style="color: #f9c1aa; font-size: 42px;"><span style=""><strong class="fthc">Feel the holiday cheer</strong></span></span></p>
-																					<br>
-																					<br>
-																					<p style="color:#f9c0a8; font-size: 14px; line-height: 1.2; word-break: break-word; text-align: center; font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Tahoma, sans-serif; mso-line-height-alt: 10px; margin: 0;"><strong>Click to open</strong>
-																					</p>
-																					<table border="0" cellpadding="0" cellspacing="0" class="divider" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top" width="100%">
-																						<tbody>
-																							<tr style="vertical-align: top;" valign="top">
-																								<td class="divider_inner" style="word-break: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;" valign="top">
-																									<table align="center" border="0" cellpadding="0" cellspacing="0" class="divider_content" height="30" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-top: 1px solid transparent; height: 30px; width: 100%;" valign="top" width="100%">
-																										<tbody>
-																											<tr style="vertical-align: top;" valign="top">
-																												<td height="30" style="word-break: break-word; vertical-align: top; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top"><span></span></td>
-																											</tr>
-																										</tbody>
-																									</table>
-																								</td>
-																							</tr>
-																						</tbody>
-																					</table>
-																					<table border="0" cellpadding="0" cellspacing="0" class="divider" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top" width="100%">
-																						<tbody>
-																							<tr style="vertical-align: top;" valign="top">
-																								<td class="divider_inner" style="word-break: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;" valign="top">
-																									<table align="center" border="0" cellpadding="0" cellspacing="0" class="divider_content" height="30" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-top: 1px solid transparent; height: 30px; width: 100%;" valign="top" width="100%">
-																										<tbody>
-																											<tr style="vertical-align: top;" valign="top">
-																												<td height="30" style="word-break: break-word; vertical-align: top; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top"><span></span></td>
-																											</tr>
-																										</tbody>
-																									</table>
-																								</td>
-																							</tr>
-																						</tbody>
-																					</table>
-																					<table border="0" cellpadding="0" cellspacing="0" class="divider" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top" width="100%">
-																						<tbody>
-																							<tr style="vertical-align: top;" valign="top">
-																								<td class="divider_inner" style="word-break: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;" valign="top">
-																									<table align="center" border="0" cellpadding="0" cellspacing="0" class="divider_content" height="30" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-top: 1px solid transparent; height: 30px; width: 100%;" valign="top" width="100%">
-																										<tbody>
-																											<tr style="vertical-align: top;" valign="top">
-																												<td height="30" style="word-break: break-word; vertical-align: top; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top"><span></span></td>
-																											</tr>
-																										</tbody>
-																									</table>
-																								</td>
-																							</tr>
-																						</tbody>
-																					</table>
+																											<td height="30" style="word-break: break-word; vertical-align: top; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top"><span></span></td>
+																										</tr>
+																									</tbody>
+																								</table>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
+																				
+																				<table border="0" cellpadding="0" cellspacing="0" class="divider" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top" width="100%">
+																					<tbody>
+																						<tr style="vertical-align: top;" valign="top">
+																							<td class="divider_inner" style="word-break: break-word; vertical-align: top; min-width: 100%; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;" valign="top">
+																								<table align="center" border="0" cellpadding="0" cellspacing="0" class="divider_content" height="30" role="presentation" style="table-layout: fixed; vertical-align: top; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; border-top: 1px solid transparent; height: 30px; width: 100%;" valign="top" width="100%">
+																									<tbody>
+																										<tr style="vertical-align: top;" valign="top">
+																											<td height="30" style="word-break: break-word; vertical-align: top; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;" valign="top"><span></span></td>
+																										</tr>
+																									</tbody>
+																								</table>
+																							</td>
+																						</tr>
+																					</tbody>
+																				</table>
 
-																				</div>
 																			</div>
-																			<!--[if mso]></td></tr></table><![endif]-->
-																			<!--[if (!mso)&(!IE)]><!-->
 																		</div>
-																		<!--<![endif]-->
+																		<!--[if mso]></td></tr></table><![endif]-->
+																		<!--[if (!mso)&(!IE)]><!-->
 																	</div>
+																	<!--<![endif]-->
 																</div>
-																<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
-																<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
 															</div>
+															<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+															<!--[if (mso)|(IE)]></td></tr></table></td></tr></table><![endif]-->
 														</div>
 													</div>
+												</div>
 
-													<div style="/*background-image:url(https://i.imgur.com/Eug00EN.jpg)*/; background-position:center;background-repeat:repeat;/*background-color:#f9c0a8;*/">
-														<!--  -->
+												<div style="/*background-image:url(https://i.imgur.com/Eug00EN.jpg)*/; background-position:center;background-repeat:repeat;/*background-color:#f9c0a8;*/">
+													<!--  -->
 													<!-- <iframe width="0" height="0" src="https://www.youtube.com/embed/RmUWWVZw28E?rel=0&autoplay=1&muted=1" allow="autoplay;"
 														frameborder="0" allowfullscreen ></iframe> -->
 														<!-- <audio id="player" autoplay loop>
 															<source src="christmas.mp3" type="audio/mp3" allow="autoplay">
 															</audio> -->
-													<!-- 		<audio autoplay loop controls id="player" autostart="true">
-																<source src="christmas.mp3" allow="autoplay">
-																</audio> -->
+															
 																<style>
 																	#snowflakeContainer {
 																		position: absolute;
@@ -613,176 +619,176 @@ audio{
 																</div>
 
 																<script>
-//   // Array to store our Snowflake objects
-//   var snowflakes = [];
+  // Array to store our Snowflake objects
+  var snowflakes = [];
 
-//   // Global variables to store our browser's window size
-//   var browserWidth;
-//   var browserHeight;
+  // Global variables to store our browser's window size
+  var browserWidth;
+  var browserHeight;
 
-//   // Specify the number of snowflakes you want visible
-//   var numberOfSnowflakes = 50;
+  // Specify the number of snowflakes you want visible
+  var numberOfSnowflakes = 50;
 
-//   // Flag to reset the position of the snowflakes
-//   var resetPosition = false;
+  // Flag to reset the position of the snowflakes
+  var resetPosition = false;
 
-//   // Handle accessibility
-//   var enableAnimations = false;
-//   var reduceMotionQuery = matchMedia("(prefers-reduced-motion)");
+  // Handle accessibility
+  var enableAnimations = false;
+  var reduceMotionQuery = matchMedia("(prefers-reduced-motion)");
 
-//   // Handle animation accessibility preferences 
-//   function setAccessibilityState() {
-//   	if (reduceMotionQuery.matches) {
-//   		enableAnimations = false;
-//   	} else { 
-//   		enableAnimations = true;
-//   	}
-//   }
-//   setAccessibilityState();
+  // Handle animation accessibility preferences 
+  function setAccessibilityState() {
+  	if (reduceMotionQuery.matches) {
+  		enableAnimations = false;
+  	} else { 
+  		enableAnimations = true;
+  	}
+  }
+  setAccessibilityState();
 
-//   reduceMotionQuery.addListener(setAccessibilityState);
+  reduceMotionQuery.addListener(setAccessibilityState);
 
-//   //
-//   // It all starts here...
-//   //
-//   function setup() {
-//   	if (enableAnimations) {
-//   		window.addEventListener("DOMContentLoaded", generateSnowflakes, false);
-//   		window.addEventListener("resize", setResetFlag, false);
-//   	}
-//   }
-//   setup();
+  //
+  // It all starts here...
+  //
+  function setup() {
+  	if (enableAnimations) {
+  		window.addEventListener("DOMContentLoaded", generateSnowflakes, false);
+  		window.addEventListener("resize", setResetFlag, false);
+  	}
+  }
+  setup();
 
-//   //
-//   // Constructor for our Snowflake object
-//   //
-//   function Snowflake(element, speed, xPos, yPos) {
-//     // set initial snowflake properties
-//     this.element = element;
-//     this.speed = speed;
-//     this.xPos = xPos;
-//     this.yPos = yPos;
-//     this.scale = 1;
+  //
+  // Constructor for our Snowflake object
+  //
+  function Snowflake(element, speed, xPos, yPos) {
+    // set initial snowflake properties
+    this.element = element;
+    this.speed = speed;
+    this.xPos = xPos;
+    this.yPos = yPos;
+    this.scale = 1;
 
-//     // declare variables used for snowflake's motion
-//     this.counter = 0;
-//     this.sign = Math.random() < 0.5 ? 1 : -1;
+    // declare variables used for snowflake's motion
+    this.counter = 0;
+    this.sign = Math.random() < 0.5 ? 1 : -1;
 
-//     // setting an initial opacity and size for our snowflake
-//     this.element.style.opacity = (.1 + Math.random()) / 3;
-// }
+    // setting an initial opacity and size for our snowflake
+    this.element.style.opacity = (.1 + Math.random()) / 3;
+}
 
-//   //
-//   // The function responsible for actually moving our snowflake
-//   //
-//   Snowflake.prototype.update = function () {
-//     // using some trigonometry to determine our x and y position
-//     this.counter += this.speed / 5000;
-//     this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40;
-//     this.yPos += Math.sin(this.counter) / 40 + this.speed / 30;
-//     this.scale = .5 + Math.abs(10 * Math.cos(this.counter) / 20);
+  //
+  // The function responsible for actually moving our snowflake
+  //
+  Snowflake.prototype.update = function () {
+    // using some trigonometry to determine our x and y position
+    this.counter += this.speed / 5000;
+    this.xPos += this.sign * this.speed * Math.cos(this.counter) / 40;
+    this.yPos += Math.sin(this.counter) / 40 + this.speed / 30;
+    this.scale = .5 + Math.abs(10 * Math.cos(this.counter) / 20);
 
-//     // setting our snowflake's position
-//     setTransform(Math.round(this.xPos), Math.round(this.yPos), this.scale, this.element);
+    // setting our snowflake's position
+    setTransform(Math.round(this.xPos), Math.round(this.yPos), this.scale, this.element);
 
-//     // if snowflake goes below the browser window, move it back to the top
-//     if (this.yPos > browserHeight) {
-//     	this.yPos = -50;
-//     }
-// }
+    // if snowflake goes below the browser window, move it back to the top
+    if (this.yPos > browserHeight) {
+    	this.yPos = -50;
+    }
+}
 
-//   //
-//   // A performant way to set your snowflake's position and size
-//   //
-//   function setTransform(xPos, yPos, scale, el) {
-//   	el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0) scale(${scale}, ${scale})`;
-//   }
+  //
+  // A performant way to set your snowflake's position and size
+  //
+  function setTransform(xPos, yPos, scale, el) {
+  	el.style.transform = `translate3d(${xPos}px, ${yPos}px, 0) scale(${scale}, ${scale})`;
+  }
 
-//   //
-//   // The function responsible for creating the snowflake
-//   //
-//   function generateSnowflakes() {
+  //
+  // The function responsible for creating the snowflake
+  //
+  function generateSnowflakes() {
 
-//     // get our snowflake element from the DOM and store it
-//     var originalSnowflake = document.querySelector(".snowflake");
+    // get our snowflake element from the DOM and store it
+    var originalSnowflake = document.querySelector(".snowflake");
 
-//     // access our snowflake element's parent container
-//     var snowflakeContainer = originalSnowflake.parentNode;
-//     snowflakeContainer.style.display = "block";
+    // access our snowflake element's parent container
+    var snowflakeContainer = originalSnowflake.parentNode;
+    snowflakeContainer.style.display = "block";
 
-//     // get our browser's size
-//     browserWidth = document.documentElement.clientWidth;
-//     browserHeight = document.documentElement.clientHeight;
+    // get our browser's size
+    browserWidth = document.documentElement.clientWidth;
+    browserHeight = document.documentElement.clientHeight;
 
-//     // create each individual snowflake
-//     for (var i = 0; i < numberOfSnowflakes; i++) {
+    // create each individual snowflake
+    for (var i = 0; i < numberOfSnowflakes; i++) {
 
-//       // clone our original snowflake and add it to snowflakeContainer
-//       var snowflakeClone = originalSnowflake.cloneNode(true);
-//       snowflakeContainer.appendChild(snowflakeClone);
+      // clone our original snowflake and add it to snowflakeContainer
+      var snowflakeClone = originalSnowflake.cloneNode(true);
+      snowflakeContainer.appendChild(snowflakeClone);
 
-//       // set our snowflake's initial position and related properties
-//       var initialXPos = getPosition(50, browserWidth);
-//       var initialYPos = getPosition(50, browserHeight);
-//       var speed = 5 + Math.random() * 40;
+      // set our snowflake's initial position and related properties
+      var initialXPos = getPosition(50, browserWidth);
+      var initialYPos = getPosition(50, browserHeight);
+      var speed = 5 + Math.random() * 40;
 
-//       // create our Snowflake object
-//       var snowflakeObject = new Snowflake(snowflakeClone,
-//       	speed,
-//       	initialXPos,
-//       	initialYPos);
-//       snowflakes.push(snowflakeObject);
-//   }
+      // create our Snowflake object
+      var snowflakeObject = new Snowflake(snowflakeClone,
+      	speed,
+      	initialXPos,
+      	initialYPos);
+      snowflakes.push(snowflakeObject);
+  }
 
-//     // remove the original snowflake because we no longer need it visible
-//     snowflakeContainer.removeChild(originalSnowflake);
+    // remove the original snowflake because we no longer need it visible
+    snowflakeContainer.removeChild(originalSnowflake);
 
-//     moveSnowflakes();
-// }
+    moveSnowflakes();
+}
 
-//   //
-//   // Responsible for moving each snowflake by calling its update function
-//   //
-//   function moveSnowflakes() {
+  //
+  // Responsible for moving each snowflake by calling its update function
+  //
+  function moveSnowflakes() {
 
-//   	if (enableAnimations) {
-//   		for (var i = 0; i < snowflakes.length; i++) {
-//   			var snowflake = snowflakes[i];
-//   			snowflake.update();
-//   		}      
-//   	}
+  	if (enableAnimations) {
+  		for (var i = 0; i < snowflakes.length; i++) {
+  			var snowflake = snowflakes[i];
+  			snowflake.update();
+  		}      
+  	}
 
-//     // Reset the position of all the snowflakes to a new value
-//     if (resetPosition) {
-//     	browserWidth = document.documentElement.clientWidth;
-//     	browserHeight = document.documentElement.clientHeight;
+    // Reset the position of all the snowflakes to a new value
+    if (resetPosition) {
+    	browserWidth = document.documentElement.clientWidth;
+    	browserHeight = document.documentElement.clientHeight;
 
-//     	for (var i = 0; i < snowflakes.length; i++) {
-//     		var snowflake = snowflakes[i];
+    	for (var i = 0; i < snowflakes.length; i++) {
+    		var snowflake = snowflakes[i];
 
-//     		snowflake.xPos = getPosition(50, browserWidth);
-//     		snowflake.yPos = getPosition(50, browserHeight);
-//     	}
+    		snowflake.xPos = getPosition(50, browserWidth);
+    		snowflake.yPos = getPosition(50, browserHeight);
+    	}
 
-//     	resetPosition = false;
-//     }
+    	resetPosition = false;
+    }
 
-//     requestAnimationFrame(moveSnowflakes);
-// }
+    requestAnimationFrame(moveSnowflakes);
+}
 
-//   //
-//   // This function returns a number between (maximum - offset) and (maximum + offset)
-//   //
-//   function getPosition(offset, size) {
-//   	return Math.round(-1 * offset + Math.random() * (size + 2 * offset));
-//   }
+  //
+  // This function returns a number between (maximum - offset) and (maximum + offset)
+  //
+  function getPosition(offset, size) {
+  	return Math.round(-1 * offset + Math.random() * (size + 2 * offset));
+  }
 
-//   //
-//   // Trigger a reset of all the snowflakes' positions
-//   //
-//   function setResetFlag(e) {
-//   	resetPosition = true;
-//   }
+  //
+  // Trigger a reset of all the snowflakes' positions
+  //
+  function setResetFlag(e) {
+  	resetPosition = true;
+  }
 </script>
 </body>
 </html>
