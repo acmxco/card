@@ -136,7 +136,8 @@
     document.getElementById('player').play()
   })
 })
-	document.getElementById('player').muted = false
+	
+document.getElementById('player').muted = false
     document.getElementById('player').play()
 // $(".card").click(function() {
 //   $('.card').toggleClass('.cardHover');
@@ -144,11 +145,7 @@
 </script>
 
 <body class="clean-body" style="margin: 0; padding: 0; -webkit-text-size-adjust: 100%; background-color: #FFFFFF;" tabindex="0">
-<embed src="christmas.mp3" autostart="true" loop="true"
-width="0" height="0">
-</embed><noembed>
-<bgsound src="christmas.mid" loop="infinite">
-</noembed>
+
 	<!--[if IE]><div class="ie-browser"><![endif]-->
 		<table bgcolor="#FFFFFF" cellpadding="0" cellspacing="0" class="nl-container" role="presentation" style="table-layout: fixed; vertical-align: top; min-width: 320px; border-spacing: 0; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; background-color: #FFFFFF; width: 100%;" valign="top" width="100%">
 			<tbody>
@@ -588,7 +585,7 @@ width="0" height="0">
 														<!-- <audio id="player" autoplay loop>
 															<source src="christmas.mp3" type="audio/mp3" allow="autoplay">
 															</audio> -->
-															<audio autoplay loop controls id="player" autostart="true">
+															<audio autoplay loop controls id="player" autostart="true" muted>
 																<source src="christmas.mp3" allow="autoplay">
 																</audio>
 																<style>
