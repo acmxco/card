@@ -456,7 +456,7 @@ position: absolute;
 width: 450px;
 height: 650px;
 left: 50%;
-top: 43%;
+top: 48%;
 bottom: 0%;
 
 transform: translate(-50%, -50%);
@@ -471,7 +471,7 @@ box-shadow: inset 300px 0 50px #444444, 0 20px 100px #444444;
 height: 100%;
 position: relative;
 transform-origin: left;
-background: url(https://i.imgur.com/FrKYNx2.png);
+background: url(https://i.imgur.com/mniEOIf.png);
 background-color:#fff;
 transition: 3s;
 background-position: 50% 50%;
@@ -536,13 +536,13 @@ margin-bottom: -3em;
 z-index: 1;
 }
 .opentext{
-margin-top:-10em!important;
+margin-top:-28em!important;
 }
 @media (max-width: 660px) {
 .card{
 width:250px;
 height:350px;
-margin-top:5%;
+margin-top:20%;
 }
 .card .boxx{
 margin-top: 10%;
